@@ -1,0 +1,26 @@
+
+entity Employee {
+    firstName String
+	lastName String
+	email String
+	phoneNumber String
+	hireDate Instant
+	salary Long
+	commissionPct Long
+    language Language
+    }
+    entity Region {
+	regionName String
+      }
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+entity Country {
+	countryName String
+}
+relationship OneToOne {
+	Country{region} to Region
+}
+dto * with mapstruct
+service all with serviceImpl
+
